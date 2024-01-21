@@ -11,10 +11,10 @@ wit_bindgen::generate!({
 
 pub struct Runner;
 
-pub use crate::bindings::exports::foo::bar::ihttp::Guest;
+pub use crate::bindings::exports::foo::bar::ihttp::{Guest, A};
 impl Guest for Runner {
-    fn run() -> u8 {
-        0u8
+    fn run() -> A {
+        String::from("hello")
     }
 }
 // wit_bindgen::generate!({path: "./wasi-http/wit/proxy.wit"});

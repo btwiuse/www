@@ -1,4 +1,5 @@
 interface ihttp {
   type a = string;
-  run: func() -> u8;
+  type b = u8;
+  run: func() -> a;
 }
