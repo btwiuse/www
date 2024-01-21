@@ -2,7 +2,7 @@
 name = "wkrs"
 homepage = "https://workers.wasmlabs.dev/"
 documentation = "https://workers.wasmlabs.dev/docs/intro"
-version = "0.0.0"
+version = "0.0.1"
 edition = "2021"
 description = "wasm worker works"
 license = "MIT"
