@@ -1,5 +1,5 @@
 [package]
-name = "www"
+name = "wkrs"
 homepage = "https://workers.wasmlabs.dev/"
 documentation = "https://workers.wasmlabs.dev/docs/intro"
 version = "0.0.0"

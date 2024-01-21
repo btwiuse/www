@@ -9,9 +9,9 @@ wit_bindgen::generate!({
     }
 });
 
-struct Runner;
+pub struct Runner;
 
-use crate::bindings::exports::foo::bar::ihttp::Guest;
+pub use crate::bindings::exports::foo::bar::ihttp::Guest;
 impl Guest for Runner {
     fn run() -> u8 {
         0u8
