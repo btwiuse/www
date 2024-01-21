@@ -7,6 +7,7 @@ wit_bindgen::generate!({
     world: "hello",
     exports: {
         "wasi:http/incoming-handler": HttpServer,
+        "wasi:http/outgoing-handler": HttpClient,
     },
 });
 
@@ -30,6 +31,19 @@ impl Guest for HttpServer {
     }
 }
 
+use exports::wasi::http::outgoing_handler::Guest as GuestClient;
+use wasi::http::types;
+
+pub struct HttpClient;
+
+impl GuestClient for HttpClient {
+    fn handle(
+        _: OutgoingRequest,
+        _: Option<RequestOptions>,
+    ) -> Result<types::FutureIncomingResponse, types::ErrorCode> {
+        Err(ErrorCode::ConnectionRefused)
+    }
+}
 /*
 use self::httpworld::{
     send_http_request as host_send_http_request, HttpMethod, HttpRequest, HttpResponse,
