@@ -1,0 +1,26 @@
+[package]
+name = "www"
+homepage = "https://workers.wasmlabs.dev/"
+documentation = "https://workers.wasmlabs.dev/docs/intro"
+version = "0.0.0"
+edition = "2021"
+description = "wasm worker works"
+license = "MIT"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.63"
+http = "0.2.8"
+worker = { package = "wkr", version = "0.0.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.85"
+base64 = "0.21.0"
+# Use an old version until we add support for components.
+# wit-bindgen-rust = { git = "https://github.com/bytecodealliance/wit-bindgen", rev = "cb871cfa1ee460b51eb1d144b175b9aab9c50aba" }
+# wit-bindgen-rust = "0.16.0"
+wit-bindgen = "0.16.0"
+# wit-bindgen-rust = { package = "cosmian-wit-bindgen-rust", version = "0.1.1" }
+# wit-bindgen-rust = { path = "/home/btwiuse/wit-bindgen" }
+# wit-bindgen-rust = { path = "/home/btwiuse/wit-bindgen/crates/rust-wasm" }

@@ -1,0 +1,4 @@
+interface ihttp {
+  type a = string;
+  run: func() -> u8;
+}

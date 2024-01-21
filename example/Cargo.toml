@@ -1,0 +1,12 @@
+[package]
+name = "www"
+version = "0.1.0"
+edition = "2021"
+description = "wasm worker works"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.63"
+wasm-workers-rs = { path = "../../kits/rust" }
